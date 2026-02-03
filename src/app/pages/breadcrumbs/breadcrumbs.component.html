@@ -1,0 +1,184 @@
+<div class="page-container">
+    <!-- Page Header -->
+    <div class="page-header" data-aos="fade-up">
+        <h1>🔗 Breadcrumbs: Navegación de Migas de Pan</h1>
+        <div class="decorative-line-center"></div>
+        <p class="page-intro">
+            Los breadcrumbs son un elemento de navegación que muestra la ruta jerárquica desde la página
+            de inicio hasta la ubicación actual del usuario, mejorando la usabilidad y la navegación.
+        </p>
+    </div>
+
+    <!-- What are Breadcrumbs -->
+    <section class="content-section" data-aos="fade-up">
+        <div class="glass-card">
+            <h2>¿Qué son los Breadcrumbs?</h2>
+            <p>
+                Los breadcrumbs (migas de pan) son un tipo de navegación secundaria que muestra la
+                ubicación actual del usuario dentro de la estructura jerárquica del sitio web. El nombre
+                proviene del cuento de Hansel y Gretel, quienes dejaban migas de pan para encontrar
+                el camino de regreso a casa.
+            </p>
+            <div class="visual-example" data-aos="zoom-in" data-aos-delay="100">
+                <strong>Ejemplo Visual:</strong><br>
+                <span style="color: var(--accent-blue);">Inicio</span>
+                <span style="color: var(--text-muted);"> > </span>
+                <span style="color: var(--accent-blue);">Productos</span>
+                <span style="color: var(--text-muted);"> > </span>
+                <span style="color: var(--accent-blue);">Electrónica</span>
+                <span style="color: var(--text-muted);"> > </span>
+                <span style="color: var(--text-primary);">Laptops</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Breadcrumbs -->
+    <section class="content-section" data-aos="fade-up">
+        <h2 class="section-title">Tipos de Breadcrumbs</h2>
+
+        <div class="menu-types-grid">
+            <div class="type-card glass-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="type-icon">📂</div>
+                <h3>Basado en Ubicación</h3>
+                <p>
+                    Muestra la ubicación del usuario en la jerarquía del sitio. Es el tipo más común
+                    y útil para sitios con múltiples niveles de categorías.
+                </p>
+                <div class="example-box">
+                    <code>Inicio > Categoría > Subcategoría > Página Actual</code>
+                </div>
+            </div>
+
+            <div class="type-card glass-card" data-aos="flip-left" data-aos-delay="200">
+                <div class="type-icon">🔍</div>
+                <h3>Basado en Atributos</h3>
+                <p>
+                    Muestra los atributos o filtros que el usuario ha seleccionado. Común en sitios
+                    de e-commerce con muchas opciones de filtrado.
+                </p>
+                <div class="example-box">
+                    <code>Color: Azul > Talla: M > Marca: Nike</code>
+                </div>
+            </div>
+
+            <div class="type-card glass-card" data-aos="flip-left" data-aos-delay="300">
+                <div class="type-icon">📜</div>
+                <h3>Basado en Historial</h3>
+                <p>
+                    Muestra el historial de navegación del usuario (menos común). Permite retroceder
+                    por las páginas visitadas.
+                </p>
+                <div class="example-box">
+                    <code>Página 1 > Página 3 > Página 5 > Página Actual</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="content-section" data-aos="fade-up">
+        <h2 class="section-title">Beneficios de usar Breadcrumbs</h2>
+
+        <div class="best-practices-grid">
+            <div class="practice-card glass-card" data-aos="slide-right">
+                <span class="practice-number">✓</span>
+                <div>
+                    <h4>Orientación del Usuario</h4>
+                    <p>Los usuarios siempre saben dónde están en el sitio y cómo llegaron allí.</p>
+                </div>
+            </div>
+
+            <div class="practice-card glass-card" data-aos="slide-left">
+                <span class="practice-number">✓</span>
+                <div>
+                    <h4>Navegación Rápida</h4>
+                    <p>Permite retroceder niveles fácilmente sin usar el botón "atrás" del navegador.</p>
+                </div>
+            </div>
+
+            <div class="practice-card glass-card" data-aos="slide-right">
+                <span class="practice-number">✓</span>
+                <div>
+                    <h4>Mejora SEO</h4>
+                    <p>Los motores de búsqueda entienden mejor la estructura del sitio y la jerarquía de páginas.</p>
+                </div>
+            </div>
+
+            <div class="practice-card glass-card" data-aos="slide-left">
+                <span class="practice-number">✓</span>
+                <div>
+                    <h4>Reduce Tasa de Rebote</h4>
+                    <p>Los usuarios tienen más opciones de navegación, reduciendo la probabilidad de abandonar el sitio.
+                    </p>
+                </div>
+            </div>
+
+            <div class="practice-card glass-card" data-aos="slide-right">
+                <span class="practice-number">✓</span>
+                <div>
+                    <h4>Accesibilidad</h4>
+                    <p>Facilita la navegación para usuarios con tecnologías asistivas como lectores de pantalla.</p>
+                </div>
+            </div>
+
+            <div class="practice-card glass-card" data-aos="slide-left">
+                <span class="practice-number">✓</span>
+                <div>
+                    <h4>UX Mejorada</h4>
+                    <p>Proporciona contexto adicional y mejora la experiencia general del usuario.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Practices -->
+    <section class="content-section" data-aos="fade-up">
+        <div class="benefits-card gradient-card">
+            <h2 style="color: white; -webkit-text-fill-color: white;">Mejores Prácticas de Implementación</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="benefit-icon">📍</span>
+                    <h4>Ubicación Consistente</h4>
+                    <p>Coloca los breadcrumbs en la parte superior de la página, debajo del header</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">👆</span>
+                    <h4>Página Actual No Clickeable</h4>
+                    <p>La última miga (página actual) no debe ser un enlace cliqueable</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">➡️</span>
+                    <h4>Usa Separadores Claros</h4>
+                    <p>Utiliza símbolos como "/", ">", "→" para separar las migas</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">📱</span>
+                    <h4>Responsive</h4>
+                    <p>Adapta los breadcrumbs para dispositivos móviles, mostrando solo niveles esenciales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Example -->
+    <section class="content-section" data-aos="fade-up">
+        <div class="glass-card">
+            <h2>Ejemplo de Código HTML</h2>
+            <p>Estructura básica de un breadcrumb semántico y accesible:</p>
+            <div class="code-example">
+                <pre><code>&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/productos"&gt;Productos&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/productos/electronica"&gt;Electrónica&lt;/a&gt;&lt;/li&gt;
+    &lt;li aria-current="page"&gt;Laptops&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+            <div class="highlight-box">
+                <strong>Nota:</strong> El atributo <code>aria-label="breadcrumb"</code> mejora la accesibilidad,
+                y <code>aria-current="page"</code> indica la página actual a los lectores de pantalla.
+            </div>
+        </div>
+    </section>
+</div>

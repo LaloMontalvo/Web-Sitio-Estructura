@@ -1,0 +1,84 @@
+@import '../shared-pages.css';
+
+/* Sitemap specific styles */
+.sitemap-container {
+    padding: 3rem 2rem;
+}
+
+.sitemap-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sitemap-node {
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    min-width: 200px;
+    transition: all var(--transition-normal);
+}
+
+.sitemap-node:hover {
+    border-color: var(--primary-purple);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+}
+
+.sitemap-node.root {
+    background: var(--primary-gradient);
+    border-color: transparent;
+}
+
+.sitemap-node.active {
+    border-color: var(--accent-blue);
+    background: rgba(79, 172, 254, 0.1);
+}
+
+.node-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.sitemap-node strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.sitemap-node.root strong {
+    color: white;
+}
+
+.sitemap-node p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.sitemap-node.root p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.sitemap-children {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+    .sitemap-children {
+        grid-template-columns: 1fr;
+    }
+
+    .sitemap-node {
+        min-width: auto;
+    }
+}

@@ -1,0 +1,111 @@
+<!-- Modern Header with Glassmorphism -->
+<header class="topbar">
+  <div class="topbar-container">
+    <!-- Brand/Logo -->
+    <div class="brand">
+      <span class="brand-icon">🌐</span>
+      <span class="brand-text">Sitio-Estructura</span>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" (click)="toggleMobileMenu()" aria-label="Toggle menu">
+      <span class="hamburger" [class.active]="mobileMenuOpen"></span>
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav class="menu" [class.mobile-open]="mobileMenuOpen">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMobileMenu()"
+      >
+        <span class="nav-icon">🏠</span>
+        Inicio
+      </a>
+      <a routerLink="/elementos" routerLinkActive="active" (click)="closeMobileMenu()">
+        <span class="nav-icon">🧩</span>
+        Elementos
+      </a>
+      <a routerLink="/menu" routerLinkActive="active" (click)="closeMobileMenu()">
+        <span class="nav-icon">📋</span>
+        Menú
+      </a>
+      <a routerLink="/breadcrumbs" routerLinkActive="active" (click)="closeMobileMenu()">
+        <span class="nav-icon">🔗</span>
+        Breadcrumbs
+      </a>
+      <a routerLink="/mapa-sitio" routerLinkActive="active" (click)="closeMobileMenu()">
+        <span class="nav-icon">🗺️</span>
+        Mapa del sitio
+      </a>
+      <a routerLink="/busqueda" routerLinkActive="active" (click)="closeMobileMenu()">
+        <span class="nav-icon">🔍</span>
+        Búsqueda
+      </a>
+    </nav>
+
+    <!-- Search Bar -->
+    <form class="search-form" (submit)="$event.preventDefault(); goSearch()">
+      <input
+        class="search-input"
+        placeholder="Buscar…"
+        [(ngModel)]="quickQuery"
+        name="quickQuery"
+      />
+      <button class="search-btn" type="submit">
+        <span class="search-icon">🔍</span>
+      </button>
+    </form>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="content">
+  <!-- Breadcrumb Navigation -->
+  <app-breadcrumb></app-breadcrumb>
+  
+  <!-- Router Outlet for Page Content -->
+  <router-outlet></router-outlet>
+</main>
+
+<!-- Modern Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3 class="footer-title">Sitio-Estructura</h3>
+        <p class="footer-description">
+          Aprende sobre estructuras web modernas y navegación intuitiva
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <a routerLink="/">Inicio</a>
+        <a routerLink="/elementos">Elementos</a>
+        <a routerLink="/menu">Menú</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Recursos</h4>
+        <a routerLink="/breadcrumbs">Breadcrumbs</a>
+        <a routerLink="/mapa-sitio">Mapa del sitio</a>
+        <a routerLink="/busqueda">Búsqueda</a>
+      </div>
+
+      <div class="footer-social">
+        <h4>Conéctate</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="GitHub">💻</a>
+          <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Desarrollo Web Profesional. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,286 @@
+/* =========================
+   Hero Section
+   ========================= */
+.hero {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(15, 12, 41, 0.9) 0%, rgba(48, 43, 99, 0.9) 100%);
+    border-radius: var(--radius-xl);
+    margin-bottom: 4rem;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/images/hero_background_1770094295080.png') center/cover;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 900px;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease 0.4s backwards;
+}
+
+.hero-decoration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 4s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   Section Styling
+   ========================= */
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* =========================
+   Features Grid
+   ========================= */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    padding: 2rem;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.feature-card:hover .feature-icon {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.feature-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent-blue);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.feature-link:hover {
+    color: var(--accent-cyan);
+    transform: translateX(5px);
+}
+
+/* =========================
+   CTA Section
+   ========================= */
+.cta-section {
+    margin: 5rem 0 3rem;
+}
+
+.cta-card {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.cta-card h2 {
+    color: white;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    background: none;
+    -webkit-text-fill-color: white;
+}
+
+.cta-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-light {
+    background: white;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.btn-light:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline-light {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: var(--primary-dark);
+    transform: translateY(-4px);
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 400px;
+        padding: 3rem 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .cta-card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+
+    .cta-card {
+        padding: 2rem 1rem;
+    }
+}
