@@ -1,6 +1,6 @@
 @import '../shared-pages.css';
 
-/* Sitemap specific styles */
+/* Sitemap specific styles - Light Theme */
 .sitemap-container {
     padding: 3rem 2rem;
 }
@@ -13,19 +13,20 @@
 }
 
 .sitemap-node {
-    background: var(--glass-bg);
+    background: var(--bg-card);
     border: 2px solid var(--glass-border);
     border-radius: var(--radius-lg);
     padding: 1.5rem 2rem;
     text-align: center;
     min-width: 200px;
     transition: all var(--transition-normal);
+    box-shadow: var(--shadow-sm);
 }
 
 .sitemap-node:hover {
     border-color: var(--primary-purple);
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
 }
 
 .sitemap-node.root {
@@ -34,8 +35,8 @@
 }
 
 .sitemap-node.active {
-    border-color: var(--accent-blue);
-    background: rgba(79, 172, 254, 0.1);
+    border-color: var(--primary-purple);
+    background: rgba(102, 126, 234, 0.08);
 }
 
 .node-icon {

@@ -1,1 +1,325 @@
 @import '../shared-pages.css';
+
+/* =========================
+   Website Structure Diagram
+   ========================= */
+.website-diagram {
+    background: var(--bg-subtle);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.diagram-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.diagram-element {
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    position: relative;
+    transition: all var(--transition-normal);
+}
+
+.diagram-element:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+.element-label {
+    position: absolute;
+    top: -10px;
+    left: 1rem;
+    background: var(--primary-gradient);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.5px;
+}
+
+.element-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+}
+
+/* Header Diagram */
+.diagram-header {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.diagram-header .element-content {
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.mini-logo {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.mini-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.mini-nav span {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.mini-search {
+    font-size: 1rem;
+}
+
+/* Hero Diagram */
+.diagram-hero {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.15) 0%, rgba(0, 242, 254, 0.15) 100%);
+    border: 2px solid rgba(79, 172, 254, 0.3);
+    min-height: 120px;
+}
+
+.hero-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.hero-title-placeholder {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.hero-subtitle-placeholder {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.hero-cta {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* Main Area - Sidebar + Content */
+.diagram-main-area {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0.5rem;
+}
+
+.diagram-sidebar {
+    background: linear-gradient(135deg, rgba(240, 147, 251, 0.15) 0%, rgba(245, 87, 108, 0.15) 100%);
+    border: 2px solid rgba(240, 147, 251, 0.3);
+    min-height: 150px;
+}
+
+.diagram-sidebar .element-content {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+}
+
+.sidebar-item {
+    width: 80%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius-sm);
+}
+
+.diagram-content {
+    background: rgba(0, 0, 0, 0.03);
+    border: 2px dashed var(--glass-border);
+    min-height: 150px;
+}
+
+.content-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.mini-card {
+    aspect-ratio: 1;
+    background: var(--bg-light);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Footer Diagram */
+.diagram-footer {
+    background: linear-gradient(135deg, rgba(99, 110, 114, 0.15) 0%, rgba(45, 52, 54, 0.1) 100%);
+    border: 2px solid rgba(99, 110, 114, 0.3);
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.footer-columns span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius-sm);
+}
+
+/* =========================
+   Element Code Tags
+   ========================= */
+.element-code {
+    margin: 1rem 0;
+}
+
+.element-code code {
+    display: inline-block;
+    background: var(--bg-subtle);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    color: var(--primary-purple);
+    border: 1px solid var(--glass-border);
+}
+
+/* =========================
+   Semantic Table
+   ========================= */
+.semantic-table-container {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.semantic-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.semantic-table thead {
+    background: var(--primary-gradient);
+}
+
+.semantic-table th {
+    color: white;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.semantic-table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+}
+
+.semantic-table tbody tr:hover {
+    background: var(--bg-subtle);
+}
+
+.semantic-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.semantic-table code {
+    background: rgba(102, 126, 234, 0.1);
+    color: var(--primary-purple);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* =========================
+   Responsive Adjustments
+   ========================= */
+@media (max-width: 768px) {
+    .diagram-main-area {
+        grid-template-columns: 1fr;
+    }
+
+    .diagram-sidebar {
+        min-height: 80px;
+    }
+
+    .diagram-sidebar .element-content {
+        flex-direction: row;
+    }
+
+    .sidebar-item {
+        width: 60px;
+        height: 30px;
+    }
+
+    .content-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mini-nav {
+        display: none;
+    }
+
+    .semantic-table th,
+    .semantic-table td {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .website-diagram {
+        padding: 1rem;
+    }
+
+    .diagram-element {
+        padding: 0.8rem;
+    }
+
+    .element-label {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.4rem;
+    }
+
+    .hero-title-placeholder {
+        font-size: 1rem;
+    }
+
+    .content-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-columns {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+}

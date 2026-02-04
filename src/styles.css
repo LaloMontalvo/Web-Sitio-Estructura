@@ -1,15 +1,15 @@
-/* Global Styles - Modern Design System */
+/* Global Styles - Modern Light Design System */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
 
 /* =========================
    CSS Custom Properties
    ========================= */
 :root {
-  /* Color Palette - Vibrant Gradients */
+  /* Color Palette - Light Theme with Vibrant Accents */
   --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --dark-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  --light-gradient: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
 
   /* Solid Colors */
   --primary-purple: #667eea;
@@ -18,27 +18,28 @@
   --accent-pink: #f093fb;
   --accent-cyan: #00f2fe;
 
-  /* Background Colors */
-  --bg-dark: #0f0c29;
-  --bg-dark-alt: #1a1733;
-  --bg-card: rgba(255, 255, 255, 0.05);
-  --bg-card-hover: rgba(255, 255, 255, 0.08);
+  /* Background Colors - Light Theme */
+  --bg-light: #ffffff;
+  --bg-light-alt: #f8f9fa;
+  --bg-subtle: #f1f3f5;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: rgba(255, 255, 255, 1);
 
-  /* Text Colors */
-  --text-primary: #ffffff;
-  --text-secondary: #b8b5cc;
-  --text-muted: #6e6b85;
+  /* Text Colors - Dark on Light */
+  --text-primary: #2d3436;
+  --text-secondary: #636e72;
+  --text-muted: #b2bec3;
 
-  /* Glass Effect */
-  --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* Glass Effect - Light Version */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 20px rgba(102, 126, 234, 0.5);
+  /* Shadows - Subtle for Light Theme */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 20px rgba(102, 126, 234, 0.25);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -80,8 +81,7 @@ html {
 
 body {
   font-family: var(--font-primary);
-  background: var(--dark-gradient);
-  background-attachment: fixed;
+  background: var(--bg-light);
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -102,7 +102,7 @@ h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--spacing-md);
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -131,13 +131,13 @@ p {
 }
 
 a {
-  color: var(--accent-blue);
+  color: var(--primary-purple);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--accent-cyan);
+  color: var(--primary-dark);
 }
 
 /* =========================
@@ -161,15 +161,15 @@ a:hover {
   padding: var(--spacing-xl) 0;
 }
 
-/* Glass Card Effect */
+/* Glass Card Effect - Light Version */
 .glass-card {
-  background: var(--glass-bg);
+  background: var(--bg-card);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
 }
 
@@ -216,17 +216,19 @@ a:hover {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg), var(--shadow-glow);
+  color: white;
 }
 
 .btn-outline {
   background: transparent;
   border: 2px solid var(--primary-purple);
-  color: var(--text-primary);
+  color: var(--primary-purple);
 }
 
 .btn-outline:hover {
   background: var(--primary-gradient);
   border-color: transparent;
+  color: white;
 }
 
 /* Grid Layouts */
@@ -325,14 +327,14 @@ a:hover {
 
 /* Gradient Text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-alt {
-  background: var(--primary-gradient);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -392,7 +394,6 @@ a:hover {
     padding: 12px 24px;
     font-size: 0.95rem;
     min-height: 44px;
-    /* Mejor para touch targets */
   }
 
   .glass-card {
@@ -400,7 +401,6 @@ a:hover {
   }
 }
 
-/* Extra small devices (phones in portrait, less than 375px) */
 @media (max-width: 375px) {
   :root {
     --spacing-sm: 0.75rem;
@@ -434,7 +434,6 @@ a:hover {
   }
 }
 
-/* Very small devices (less than 320px) */
 @media (max-width: 320px) {
   body {
     font-size: 14px;
@@ -450,14 +449,14 @@ a:hover {
 }
 
 /* =========================
-   Custom Scrollbar
+   Custom Scrollbar - Light Theme
    ========================= */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-dark);
+  background: var(--bg-light-alt);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -518,16 +517,16 @@ a:hover {
    Code Blocks
    ========================= */
 code {
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--bg-subtle);
   padding: 2px 8px;
   border-radius: 4px;
   font-family: 'Courier New', monospace;
-  color: var(--accent-cyan);
+  color: var(--primary-purple);
   font-size: 0.9em;
 }
 
 pre {
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--bg-subtle);
   padding: var(--spacing-md);
   border-radius: var(--radius-md);
   overflow-x: auto;

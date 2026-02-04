@@ -1,15 +1,15 @@
 /* =========================
-   Header / Topbar
+   Header / Topbar - Light Theme
    ========================= */
 .topbar {
         position: sticky;
         top: 0;
         z-index: 1000;
-        background: var(--glass-bg);
+        background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border-bottom: 1px solid var(--glass-border);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
 }
 
 .topbar-container {
@@ -29,8 +29,8 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        font-size: 1.5rem;
-        font-weight: 800;
+        font-size: 1.4rem;
+        font-weight: 700;
         font-family: var(--font-heading);
         background: var(--primary-gradient);
         -webkit-background-clip: text;
@@ -42,12 +42,11 @@
 }
 
 .brand:hover {
-        transform: scale(1.05);
+        transform: scale(1.02);
 }
 
 .brand-icon {
-        font-size: 1.8rem;
-        filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.6));
+        font-size: 1.6rem;
 }
 
 .brand-text {
@@ -68,7 +67,7 @@
 
 .hamburger {
         display: block;
-        width: 28px;
+        width: 24px;
         height: 2px;
         background: var(--text-primary);
         position: relative;
@@ -79,18 +78,18 @@
 .hamburger::after {
         content: '';
         position: absolute;
-        width: 28px;
+        width: 24px;
         height: 2px;
         background: var(--text-primary);
         transition: all var(--transition-normal);
 }
 
 .hamburger::before {
-        top: -8px;
+        top: -7px;
 }
 
 .hamburger::after {
-        bottom: -8px;
+        bottom: -7px;
 }
 
 .hamburger.active {
@@ -108,12 +107,12 @@
 }
 
 /* =========================
-   Navigation Menu
+   Navigation Menu - Minimalist
    ========================= */
 .menu {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.25rem;
         flex: 1;
         justify-content: center;
 }
@@ -121,8 +120,7 @@
 .menu a {
         display: flex;
         align-items: center;
-        gap: 0.4rem;
-        padding: 0.6rem 1rem;
+        padding: 0.6rem 1.2rem;
         border-radius: var(--radius-md);
         text-decoration: none;
         color: var(--text-secondary);
@@ -136,39 +134,33 @@
 .menu a::after {
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: 4px;
         left: 50%;
         transform: translateX(-50%);
         width: 0;
         height: 2px;
         background: var(--primary-gradient);
         transition: width var(--transition-normal);
+        border-radius: 1px;
 }
 
 .menu a:hover {
         color: var(--text-primary);
-        background: var(--bg-card);
-        transform: translateY(-2px);
+        background: var(--bg-subtle);
 }
 
 .menu a:hover::after {
-        width: 80%;
+        width: 60%;
 }
 
 .menu a.active {
-        color: var(--text-primary);
-        background: var(--glass-bg);
-        border: 1px solid var(--glass-border);
+        color: var(--primary-purple);
+        background: rgba(102, 126, 234, 0.08);
         font-weight: 600;
-        box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
 }
 
 .menu a.active::after {
-        width: 80%;
-}
-
-.nav-icon {
-        font-size: 1.1rem;
+        width: 60%;
 }
 
 /* =========================
@@ -178,17 +170,17 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        background: rgba(0, 0, 0, 0.2);
-        padding: 0.3rem 0.5rem;
+        background: var(--bg-subtle);
+        padding: 0.4rem 0.6rem;
         border-radius: var(--radius-md);
         border: 1px solid var(--glass-border);
         transition: all var(--transition-normal);
 }
 
 .search-form:focus-within {
-        background: rgba(0, 0, 0, 0.3);
+        background: var(--bg-light);
         border-color: var(--primary-purple);
-        box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
 }
 
 .search-input {
@@ -196,9 +188,9 @@
         border: none;
         outline: none;
         color: var(--text-primary);
-        padding: 0.4rem 0.8rem;
+        padding: 0.4rem 0.6rem;
         font-size: 0.9rem;
-        width: 180px;
+        width: 160px;
         font-family: var(--font-primary);
 }
 
@@ -210,7 +202,7 @@
         background: var(--primary-gradient);
         border: none;
         border-radius: var(--radius-sm);
-        padding: 0.4rem 0.8rem;
+        padding: 0.4rem 0.7rem;
         cursor: pointer;
         transition: all var(--transition-fast);
         display: flex;
@@ -220,11 +212,11 @@
 
 .search-btn:hover {
         transform: scale(1.05);
-        box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+        box-shadow: 0 0 12px rgba(102, 126, 234, 0.4);
 }
 
 .search-icon {
-        font-size: 1rem;
+        font-size: 0.9rem;
 }
 
 /* =========================
@@ -238,11 +230,10 @@
 }
 
 /* =========================
-   Footer
+   Footer - Light Theme
    ========================= */
 .footer {
-        background: linear-gradient(135deg, rgba(15, 12, 41, 0.95) 0%, rgba(48, 43, 99, 0.95) 100%);
-        backdrop-filter: blur(10px);
+        background: var(--bg-light-alt);
         border-top: 1px solid var(--glass-border);
         margin-top: 4rem;
 }
@@ -298,7 +289,7 @@
 }
 
 .footer-links a:hover {
-        color: var(--accent-blue);
+        color: var(--primary-purple);
         padding-left: 0.5rem;
 }
 
@@ -321,7 +312,7 @@
         justify-content: center;
         width: 40px;
         height: 40px;
-        background: var(--glass-bg);
+        background: var(--bg-light);
         border: 1px solid var(--glass-border);
         border-radius: 50%;
         font-size: 1.2rem;
@@ -332,7 +323,7 @@
 .social-icon:hover {
         background: var(--primary-gradient);
         transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
 
 .footer-bottom {
@@ -356,7 +347,7 @@
         }
 
         .menu {
-                gap: 0.3rem;
+                gap: 0.15rem;
         }
 
         .menu a {
@@ -365,7 +356,7 @@
         }
 
         .search-input {
-                width: 140px;
+                width: 120px;
         }
 }
 
@@ -373,6 +364,7 @@
         .topbar-container {
                 flex-wrap: wrap;
                 position: relative;
+                padding: 0.8rem 1rem;
         }
 
         .mobile-menu-toggle {
@@ -382,7 +374,7 @@
 
         .brand {
                 order: 1;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
         }
 
         .search-form {
@@ -397,16 +389,16 @@
                 left: 0;
                 right: 0;
                 flex-direction: column;
-                background: var(--bg-dark-alt);
+                background: var(--bg-light);
                 border-top: 1px solid var(--glass-border);
                 padding: 1rem;
-                gap: 0.5rem;
+                gap: 0.25rem;
                 max-height: 0;
                 overflow: hidden;
                 opacity: 0;
-                transform: translateY(-20px);
+                transform: translateY(-10px);
                 transition: all var(--transition-normal);
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
 
         .menu.mobile-open {
@@ -421,10 +413,6 @@
                 padding: 0.8rem 1rem;
         }
 
-        .nav-icon {
-                font-size: 1.3rem;
-        }
-
         .footer-content {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
@@ -437,7 +425,7 @@
 
 @media (max-width: 480px) {
         .topbar-container {
-                padding: 0.8rem 1rem;
+                padding: 0.6rem 0.8rem;
         }
 
         .brand {
@@ -445,16 +433,16 @@
         }
 
         .brand-icon {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
         }
 
         .search-input {
-                width: 100px;
+                width: 90px;
                 font-size: 0.85rem;
         }
 
         .search-form {
-                padding: 0.2rem 0.4rem;
+                padding: 0.25rem 0.4rem;
         }
 
         .content {

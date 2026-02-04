@@ -1,5 +1,5 @@
 /* =========================
-   Hero Section
+   Hero Section - Light Theme
    ========================= */
 .hero {
     position: relative;
@@ -9,7 +9,7 @@
     justify-content: center;
     padding: 4rem 2rem;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(15, 12, 41, 0.9) 0%, rgba(48, 43, 99, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
     border-radius: var(--radius-xl);
     margin-bottom: 4rem;
 }
@@ -22,7 +22,7 @@
     right: 0;
     bottom: 0;
     background: url('/images/hero_background_1770094295080.png') center/cover;
-    opacity: 0.3;
+    opacity: 0.1;
     z-index: 0;
 }
 
@@ -38,7 +38,7 @@
     margin-bottom: 1.5rem;
     font-weight: 800;
     line-height: 1.1;
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #f093fb 100%);
+    background: var(--primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -68,7 +68,7 @@
     transform: translate(-50%, -50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     animation: pulse 4s ease-in-out infinite;
     z-index: 0;
@@ -115,10 +115,14 @@
     padding: 2rem;
     transition: all var(--transition-normal);
     cursor: pointer;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
 }
 
 .feature-card:hover {
     transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-lg);
 }
 
 .feature-icon {
@@ -147,7 +151,6 @@
 .feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--text-primary);
 }
 
 .feature-card p {
@@ -159,14 +162,14 @@
 .feature-link {
     display: inline-flex;
     align-items: center;
-    color: var(--accent-blue);
+    color: var(--primary-purple);
     font-weight: 600;
     text-decoration: none;
     transition: all var(--transition-fast);
 }
 
 .feature-link:hover {
-    color: var(--accent-cyan);
+    color: var(--primary-dark);
     transform: translateX(5px);
 }
 
@@ -180,6 +183,8 @@
 .cta-card {
     text-align: center;
     padding: 3rem 2rem;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-lg);
 }
 
 .cta-card h2 {
@@ -213,6 +218,7 @@
     background: rgba(255, 255, 255, 0.9);
     transform: translateY(-4px);
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    color: var(--primary-dark);
 }
 
 .btn-outline-light {

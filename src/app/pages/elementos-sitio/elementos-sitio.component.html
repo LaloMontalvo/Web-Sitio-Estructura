@@ -1,17 +1,87 @@
 <div class="page-container">
     <!-- Page Header -->
     <div class="page-header" data-aos="fade-up">
-        <h1>🧩 Elementos del Sitio Web</h1>
+        <h1>Elementos del Sitio Web</h1>
         <div class="decorative-line-center"></div>
         <p class="page-intro">
-            Conoce los componentes fundamentales que conforman los sitios web modernos y cómo
-            cada uno contribuye a una experiencia de usuario excepcional.
+            Descubre la anatomía de un sitio web moderno. Aprende sobre cada componente
+            que conforma la estructura de una página web y cómo interactúan entre sí.
         </p>
     </div>
 
-    <!-- Elements Grid -->
+    <!-- Website Structure Diagram -->
+    <section class="content-section" data-aos="fade-up">
+        <h2 class="section-title">Anatomía de una Página Web</h2>
+
+        <div class="website-diagram">
+            <div class="diagram-container">
+                <!-- Header -->
+                <div class="diagram-element diagram-header" data-aos="fade-down" data-aos-delay="100">
+                    <div class="element-label">HEADER</div>
+                    <div class="element-content">
+                        <span class="mini-logo">Logo</span>
+                        <div class="mini-nav">
+                            <span>Nav</span>
+                            <span>Nav</span>
+                            <span>Nav</span>
+                        </div>
+                        <span class="mini-search">🔍</span>
+                    </div>
+                </div>
+
+                <!-- Hero -->
+                <div class="diagram-element diagram-hero" data-aos="fade-up" data-aos-delay="200">
+                    <div class="element-label">HERO SECTION</div>
+                    <div class="element-content">
+                        <div class="hero-placeholder">
+                            <span class="hero-title-placeholder">Título Principal</span>
+                            <span class="hero-subtitle-placeholder">Subtítulo descriptivo</span>
+                            <span class="hero-cta">CTA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Area -->
+                <div class="diagram-main-area" data-aos="fade-up" data-aos-delay="300">
+                    <div class="diagram-element diagram-sidebar">
+                        <div class="element-label">SIDEBAR</div>
+                        <div class="element-content">
+                            <div class="sidebar-item"></div>
+                            <div class="sidebar-item"></div>
+                            <div class="sidebar-item"></div>
+                        </div>
+                    </div>
+                    <div class="diagram-element diagram-content">
+                        <div class="element-label">CONTENIDO PRINCIPAL</div>
+                        <div class="element-content">
+                            <div class="content-cards">
+                                <div class="mini-card"></div>
+                                <div class="mini-card"></div>
+                                <div class="mini-card"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="diagram-element diagram-footer" data-aos="fade-up" data-aos-delay="400">
+                    <div class="element-label">FOOTER</div>
+                    <div class="element-content">
+                        <div class="footer-columns">
+                            <span>Links</span>
+                            <span>Links</span>
+                            <span>Links</span>
+                            <span>Social</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elements Definitions -->
     <section class="content-section">
-        <h2 class="section-title" data-aos="fade-up">Componentes Esenciales</h2>
+        <h2 class="section-title" data-aos="fade-up">Definiciones de Elementos</h2>
 
         <div class="elements-grid">
             <!-- Header -->
@@ -19,124 +89,205 @@
                 <div class="element-icon">🔝</div>
                 <h3>Header (Encabezado)</h3>
                 <p>
-                    Sección superior del sitio que contiene el logo, navegación principal, y elementos
-                    clave como búsqueda o carrito de compras.
+                    Zona superior fija que contiene la identidad del sitio. Incluye logo,
+                    menú de navegación principal, y acciones rápidas como búsqueda o login.
                 </p>
-                <div class="example-box">
-                    <strong>Uso:</strong> Presente en todas las páginas para navegación consistente
+                <div class="element-code">
+                    <code>&lt;header&gt;...&lt;/header&gt;</code>
                 </div>
-            </div>
-
-            <!-- Footer -->
-            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="200">
-                <div class="element-icon">🔚</div>
-                <h3>Footer (Pie de Página)</h3>
-                <p>
-                    Sección inferior que incluye enlaces secundarios, información de contacto, redes
-                    sociales y derechos de autor.
-                </p>
                 <div class="example-box">
-                    <strong>Uso:</strong> Información auxiliar y enlaces no-críticos
+                    <strong>Características:</strong> Sticky, responsive, consistente en todas las páginas
                 </div>
             </div>
 
             <!-- Navigation -->
-            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="150">
                 <div class="element-icon">🧭</div>
-                <h3>Navegación</h3>
+                <h3>Navegación (Nav)</h3>
                 <p>
-                    Sistema de menús y enlaces que permite a los usuarios moverse entre diferentes
-                    secciones y páginas del sitio.
+                    Sistema de enlaces que permite a los usuarios moverse entre secciones.
+                    Puede ser horizontal, vertical, o hamburger en móviles.
                 </p>
-                <div class="example-box">
-                    <strong>Uso:</strong> Facilitar el acceso a contenido importante
+                <div class="element-code">
+                    <code>&lt;nav&gt;...&lt;/nav&gt;</code>
                 </div>
-            </div>
-
-            <!-- Cards -->
-            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="400">
-                <div class="element-icon">🃏</div>
-                <h3>Cards (Tarjetas)</h3>
-                <p>
-                    Contenedores modulares que agrupan información relacionada de forma visual y
-                    organizada, perfectos para productos o artículos.
-                </p>
                 <div class="example-box">
-                    <strong>Uso:</strong> Mostrar contenido de forma escaneable
-                </div>
-            </div>
-
-            <!-- Forms -->
-            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="500">
-                <div class="element-icon">📝</div>
-                <h3>Formularios</h3>
-                <p>
-                    Interfaces para que los usuarios ingresen datos: registro, contacto, búsqueda,
-                    pagos. Incluyen campos, botones y validación.
-                </p>
-                <div class="example-box">
-                    <strong>Uso:</strong> Capturar información del usuario
-                </div>
-            </div>
-
-            <!-- Buttons -->
-            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="600">
-                <div class="element-icon">🔘</div>
-                <h3>Botones (CTA)</h3>
-                <p>
-                    Elementos interactivos que desencadenan acciones. Los botones de "Call to Action"
-                    guían al usuario hacia conversiones.
-                </p>
-                <div class="example-box">
-                    <strong>Uso:</strong> Incentivar acciones clave del usuario
+                    <strong>Tipos:</strong> Principal, secundaria, breadcrumbs, footer nav
                 </div>
             </div>
 
             <!-- Hero Section -->
-            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="700">
+            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="200">
                 <div class="element-icon">🎬</div>
                 <h3>Hero Section</h3>
                 <p>
-                    Sección destacada en la parte superior de la página con mensaje principal, imagen
-                    impactante y llamada a la acción.
+                    Sección destacada al inicio con mensaje principal, imagen impactante
+                    y llamada a la acción. Es la primera impresión del usuario.
                 </p>
+                <div class="element-code">
+                    <code>&lt;section class="hero"&gt;...&lt;/section&gt;</code>
+                </div>
                 <div class="example-box">
-                    <strong>Uso:</strong> Captar atención y comunicarmensaje clave
+                    <strong>Incluye:</strong> Título, subtítulo, CTA, imagen/video de fondo
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="250">
+                <div class="element-icon">📄</div>
+                <h3>Contenido Principal (Main)</h3>
+                <p>
+                    Área central donde reside el contenido único de cada página.
+                    Debe ser semánticamente correcto y accesible.
+                </p>
+                <div class="element-code">
+                    <code>&lt;main&gt;...&lt;/main&gt;</code>
+                </div>
+                <div class="example-box">
+                    <strong>Nota:</strong> Solo debe haber un &lt;main&gt; por página
                 </div>
             </div>
 
             <!-- Sidebar -->
-            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="800">
+            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="300">
                 <div class="element-icon">📊</div>
                 <h3>Sidebar (Barra Lateral)</h3>
                 <p>
-                    Columna lateral que contiene navegación secundaria, widgets, anuncios, o
-                    contenido relacionado.
+                    Columna complementaria con contenido secundario como widgets,
+                    filtros, anuncios, o navegación adicional.
                 </p>
+                <div class="element-code">
+                    <code>&lt;aside&gt;...&lt;/aside&gt;</code>
+                </div>
                 <div class="example-box">
-                    <strong>Uso:</strong> Contenido complementario y auxiliar
+                    <strong>Uso:</strong> Blogs, e-commerce, dashboards
                 </div>
             </div>
 
-            <!-- Modal -->
-            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="900">
-                <div class="element-icon">🔲</div>
-                <h3>Modales (Popups)</h3>
+            <!-- Cards -->
+            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="350">
+                <div class="element-icon">🃏</div>
+                <h3>Cards (Tarjetas)</h3>
                 <p>
-                    Ventanas emergentes que aparecen sobre el contenido principal para mostrar
-                    información importante o capturar datos.
+                    Contenedores modulares que agrupan información relacionada.
+                    Ideales para productos, artículos, perfiles o servicios.
                 </p>
+                <div class="element-code">
+                    <code>&lt;article class="card"&gt;...&lt;/article&gt;</code>
+                </div>
                 <div class="example-box">
-                    <strong>Uso:</strong> Alertas, formularios, confirmaciones
+                    <strong>Incluye:</strong> Imagen, título, descripción, acciones
+                </div>
+            </div>
+
+            <!-- Forms -->
+            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="element-icon">📝</div>
+                <h3>Formularios</h3>
+                <p>
+                    Interfaces para capturar datos del usuario: contacto, registro,
+                    búsqueda, checkout. Requieren validación y feedback.
+                </p>
+                <div class="element-code">
+                    <code>&lt;form&gt;...&lt;/form&gt;</code>
+                </div>
+                <div class="example-box">
+                    <strong>Elementos:</strong> Input, select, textarea, button, labels
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="450">
+                <div class="element-icon">🔘</div>
+                <h3>Botones (CTA)</h3>
+                <p>
+                    Elementos interactivos que desencadenan acciones. Los "Call to Action"
+                    guían al usuario hacia conversiones importantes.
+                </p>
+                <div class="element-code">
+                    <code>&lt;button&gt;Acción&lt;/button&gt;</code>
+                </div>
+                <div class="example-box">
+                    <strong>Tipos:</strong> Primary, secondary, ghost, icon button
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="element-card glass-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="element-icon">🔚</div>
+                <h3>Footer (Pie de Página)</h3>
+                <p>
+                    Sección inferior con información secundaria: enlaces, contacto,
+                    redes sociales, copyright y políticas legales.
+                </p>
+                <div class="element-code">
+                    <code>&lt;footer&gt;...&lt;/footer&gt;</code>
+                </div>
+                <div class="example-box">
+                    <strong>Incluye:</strong> Mapa del sitio, redes, newsletter, legal
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Design Principles -->
+    <!-- HTML5 Semantic Elements -->
+    <section class="content-section" data-aos="fade-up">
+        <h2 class="section-title">Elementos Semánticos HTML5</h2>
+
+        <div class="semantic-table-container">
+            <table class="semantic-table">
+                <thead>
+                    <tr>
+                        <th>Elemento</th>
+                        <th>Propósito</th>
+                        <th>Ejemplo de Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;header&gt;</code></td>
+                        <td>Encabezado de página o sección</td>
+                        <td>Logo, navegación, búsqueda</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;nav&gt;</code></td>
+                        <td>Navegación principal</td>
+                        <td>Menú, breadcrumbs, links</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;main&gt;</code></td>
+                        <td>Contenido principal único</td>
+                        <td>Artículos, productos, servicios</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;article&gt;</code></td>
+                        <td>Contenido independiente</td>
+                        <td>Post de blog, noticia, comentario</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;section&gt;</code></td>
+                        <td>Agrupación temática</td>
+                        <td>Capítulos, pestañas, secciones</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;aside&gt;</code></td>
+                        <td>Contenido relacionado</td>
+                        <td>Sidebar, widgets, anuncios</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;footer&gt;</code></td>
+                        <td>Pie de página o sección</td>
+                        <td>Copyright, links secundarios</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Best Practices -->
     <section class="content-section" data-aos="fade-up">
         <div class="benefits-card gradient-card">
-            <h2 style="color: white; -webkit-text-fill-color: white;">Principios de Diseño de Elementos</h2>
+            <h2 style="color: white; -webkit-text-fill-color: white;">Mejores Prácticas</h2>
             <div class="benefits-grid">
                 <div class="benefit-item">
                     <span class="benefit-icon">🎨</span>
@@ -144,19 +295,19 @@
                     <p>Mantén un estilo coherente en todos los elementos del sitio</p>
                 </div>
                 <div class="benefit-item">
-                    <span class="benefit-icon">👁️</span>
-                    <h4>Jerarquía Clara</h4>
-                    <p>Organiza elementos por importancia y guía la atención del usuario</p>
-                </div>
-                <div class="benefit-item">
-                    <span class="benefit-icon">⚡</span>
-                    <h4>Usabilidad</h4>
-                    <p>Diseña pensando en la facilidad de uso e interacción</p>
+                    <span class="benefit-icon">♿</span>
+                    <h4>Accesibilidad</h4>
+                    <p>Usa HTML semántico y atributos ARIA correctamente</p>
                 </div>
                 <div class="benefit-item">
                     <span class="benefit-icon">📱</span>
-                    <h4>Responsividad</h4>
+                    <h4>Responsive Design</h4>
                     <p>Asegura que todos los elementos funcionen en cualquier dispositivo</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">⚡</span>
+                    <h4>Rendimiento</h4>
+                    <p>Optimiza imágenes y minimiza el CSS/JS innecesario</p>
                 </div>
             </div>
         </div>

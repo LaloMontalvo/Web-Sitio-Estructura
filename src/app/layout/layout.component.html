@@ -1,4 +1,4 @@
-<!-- Modern Header with Glassmorphism -->
+<!-- Modern Header - Light Theme -->
 <header class="topbar">
   <div class="topbar-container">
     <!-- Brand/Logo -->
@@ -12,47 +12,32 @@
       <span class="hamburger" [class.active]="mobileMenuOpen"></span>
     </button>
 
-    <!-- Navigation Menu -->
+    <!-- Navigation Menu - Minimalist without icons -->
     <nav class="menu" [class.mobile-open]="mobileMenuOpen">
-      <a
-        routerLink="/"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        (click)="closeMobileMenu()"
-      >
-        <span class="nav-icon">🏠</span>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMobileMenu()">
         Inicio
       </a>
-      <a routerLink="/elementos" routerLinkActive="active" (click)="closeMobileMenu()">
-        <span class="nav-icon">🧩</span>
+      <a routerLink="/elementos-sitio" routerLinkActive="active" (click)="closeMobileMenu()">
         Elementos
       </a>
       <a routerLink="/menu" routerLinkActive="active" (click)="closeMobileMenu()">
-        <span class="nav-icon">📋</span>
         Menú
       </a>
       <a routerLink="/breadcrumbs" routerLinkActive="active" (click)="closeMobileMenu()">
-        <span class="nav-icon">🔗</span>
         Breadcrumbs
       </a>
       <a routerLink="/mapa-sitio" routerLinkActive="active" (click)="closeMobileMenu()">
-        <span class="nav-icon">🗺️</span>
         Mapa del sitio
       </a>
       <a routerLink="/busqueda" routerLinkActive="active" (click)="closeMobileMenu()">
-        <span class="nav-icon">🔍</span>
         Búsqueda
       </a>
     </nav>
 
     <!-- Search Bar -->
     <form class="search-form" (submit)="$event.preventDefault(); goSearch()">
-      <input
-        class="search-input"
-        placeholder="Buscar…"
-        [(ngModel)]="quickQuery"
-        name="quickQuery"
-      />
+      <input class="search-input" placeholder="Buscar…" [(ngModel)]="quickQuery" name="quickQuery" />
       <button class="search-btn" type="submit">
         <span class="search-icon">🔍</span>
       </button>
@@ -64,12 +49,12 @@
 <main class="content">
   <!-- Breadcrumb Navigation -->
   <app-breadcrumb></app-breadcrumb>
-  
+
   <!-- Router Outlet for Page Content -->
   <router-outlet></router-outlet>
 </main>
 
-<!-- Modern Footer -->
+<!-- Modern Footer - Light Theme -->
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-content">
@@ -83,7 +68,7 @@
       <div class="footer-links">
         <h4>Navegación</h4>
         <a routerLink="/">Inicio</a>
-        <a routerLink="/elementos">Elementos</a>
+        <a routerLink="/elementos-sitio">Elementos</a>
         <a routerLink="/menu">Menú</a>
       </div>
 

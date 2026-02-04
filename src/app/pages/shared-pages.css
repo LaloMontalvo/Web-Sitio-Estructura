@@ -1,4 +1,4 @@
-/* Shared Page Styles for Content Pages */
+/* Shared Page Styles for Content Pages - Light Theme */
 
 .page-container {
     max-width: 1200px;
@@ -21,6 +21,7 @@
     max-width: 800px;
     margin: 1.5rem auto 0;
     line-height: 1.8;
+    color: var(--text-secondary);
 }
 
 .content-section {
@@ -33,10 +34,10 @@
     text-align: center;
 }
 
-/* Highlight Boxes */
+/* Highlight Boxes - Light Theme */
 .highlight-box,
 .example-box {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--bg-subtle);
     padding: 1rem 1.5rem;
     border-radius: var(--radius-md);
     border-left: 4px solid var(--primary-purple);
@@ -60,16 +61,20 @@
 .element-card {
     padding: 2rem;
     transition: all var(--transition-normal);
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
 }
 
 .type-card:hover,
 .element-card:hover {
     transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
 }
 
 .type-icon,
 .element-icon {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     display: block;
 }
@@ -78,6 +83,15 @@
 .element-card h3 {
     color: var(--text-primary);
     margin-bottom: 1rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.type-card p,
+.element-card p {
+    color: var(--text-secondary);
 }
 
 /* Best Practices Grid */
@@ -92,6 +106,9 @@
     align-items: flex-start;
     gap: 1.5rem;
     padding: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
 }
 
 .practice-number {
@@ -112,11 +129,25 @@
     color: var(--text-primary);
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
+    background: none;
+    -webkit-text-fill-color: currentColor;
 }
 
-/* Benefits */
+.practice-card p {
+    color: var(--text-secondary);
+}
+
+/* Benefits - Keep gradient for contrast */
 .benefits-card {
     padding: 3rem 2rem;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-lg);
+}
+
+.benefits-card h2 {
+    color: white;
+    -webkit-text-fill-color: white;
+    background: none;
 }
 
 .benefits-grid {
@@ -150,7 +181,7 @@
 
 /* Visual Examples / Diagrams */
 .visual-example {
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--bg-subtle);
     padding: 2rem;
     border-radius: var(--radius-lg);
     border: 2px dashed var(--glass-border);
@@ -160,7 +191,7 @@
 
 /* Interactive Elements */
 .interactive-demo {
-    background: var(--glass-bg);
+    background: var(--bg-card);
     padding: 2rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--glass-border);
